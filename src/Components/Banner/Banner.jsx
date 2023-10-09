@@ -1,19 +1,19 @@
 const Banner = () => {
     return (
-        <div className="my-3">
+        <div className="my-3 container mx-auto px-5">
             <div className="hero rounded-xl" style={{ backgroundImage: 'url(https://i.ibb.co/QmDtfZK/IMG-20231009-WA0000.jpg)' }}>
                 <div className="hero-overlay bg-opacity-40 rounded-xl py-56"></div>
-                <div className="grid grid-cols-1 lg:grid-cols-2 py-20">
-                    <div className="flex items-center ml-8">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-20">
+                    <div className="flex items-center px-5 lg:ml-28">
                         <div>
                             <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-white"> Your Hassle-Free <br /> Hotel Booking Solution</h1>
                             <p className="mb-5 text-white">Have You ever come across a hotel that feels like home? If not, you can find the hotel here.</p>
                         </div>
                     </div>
                     <div className="flex justify-center lg:justify-end">
-                        <div className="bg-white md:m-10 rounded-xl w-[270px] md:w-80">
+                        <div className="bg-white md:m-10 rounded-xl w-[260px] md:w-96">
                             <form className="card-body">
-                                <h2 className="text-xl text-black font-bold">Booking Hotel</h2>
+                                <h2 className="text-xl text-black font-bold pt-5">Booking Hotel</h2>
                                 <p className="text-xs">Lets start ordering your place to stay</p>
 
                                 <div className="form-control">
@@ -39,7 +39,7 @@ const Banner = () => {
                                     </div>
                                 </div>
 
-                                <div className="form-control mt-6">
+                                <div className="form-control mt-6 pb-5">
                                     <button className="btn bg-yellow-400 text-white">Discover Place</button>
                                 </div>
                             </form>
