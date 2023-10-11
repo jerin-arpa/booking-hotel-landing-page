@@ -1,6 +1,6 @@
 const Banner = () => {
     return (
-        <div className="my-3 container mx-auto px-5">
+        <div className="mb-3 container mx-auto px-5">
             <div className="hero rounded-xl" style={{ backgroundImage: 'url(https://i.ibb.co/QmDtfZK/IMG-20231009-WA0000.jpg)' }}>
                 <div className="hero-overlay bg-opacity-40 rounded-xl py-56"></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-20">
