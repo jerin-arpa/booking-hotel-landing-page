@@ -17,7 +17,7 @@ const Home = () => {
             <Banner></Banner>
 
             {/* Best offer */}
-            <div className="mb-28 bg-gray-50 py-20">
+            <div className="mb-28">
                 <div className="container mx-auto px-5 ">
                     <div className="mb-8">
                         <p className="text-yellow-400 font-bold pb-2">HOT OFFER</p>
@@ -34,7 +34,7 @@ const Home = () => {
 
 
             {/* Hotel Facility */}
-            <section className="mb-20 py-20">
+            <section className="mb-20 py-20  bg-gray-100">
                 <div className="flex flex-col lg:flex-row relative container mx-auto px-5 gap-10">
                     <div className="flex-1 ">
                         <div>
@@ -101,7 +101,7 @@ const Home = () => {
 
 
             {/* Hotels of the months */}
-            <div className="mb-28 bg-gray-50 py-20">
+            <div className="mb-28">
                 <div className="container mx-auto px-5 ">
                     <div className="mb-8">
                         <p className="text-yellow-400 font-bold pb-2">RECOMMENDED HOTEL</p>
@@ -110,7 +110,7 @@ const Home = () => {
                     </div>
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
                         {
-                            data.map(hotel => <Hotel key={hotel.id} hotel={hotel}></Hotel>)
+                            data.slice(0, 6).map(hotel => <Hotel key={hotel.id} hotel={hotel}></Hotel>)
                         }
                     </div>
                 </div>
@@ -118,71 +118,92 @@ const Home = () => {
 
 
             {/* FAQ */}
-            <section className="container mx-auto px-5 my-20 pb-10">
-                <div className="mb-10 text-center">
-                    <p className="text-yellow-400 font-bold pb-2">FAQS</p>
-                    <h2 className="text-4xl text-black font-bold mb-3">Frequently ask question</h2>
-                    <p>Everything you need to know right here all your fingertips. Ask question, browse around <br /> for answer, or submit your feature requests.</p>
-                </div>
+            <section className="my-20 bg-gray-100">
+                <div className="container mx-auto px-5  py-20">
+                    <div className="mb-10 text-center">
+                        <p className="text-yellow-400 font-bold pb-2">FAQS</p>
+                        <h2 className="text-4xl text-black font-bold mb-3">Frequently ask question</h2>
+                        <p>Everything you need to know right here all your fingertips. Ask question, browse around <br /> for answer, or submit your feature requests.</p>
+                    </div>
 
-                <div className="flex flex-col lg:flex-row gap-10">
-                    <div className="flex-1">
-                        <div className="collapse collapse-arrow bg-white border mb-2">
-                            <input type="radio" name="my-accordion-2" checked="checked" />
-                            <div className="collapse-title text-xl font-bold">
-                                How do I make a reservation at a resort or hotel?
+                    <div className="flex flex-col lg:flex-row gap-10">
+                        <div className="flex-1">
+                            <div className="collapse collapse-arrow bg-white border mb-2">
+                                <input type="radio" name="my-accordion-2" checked="checked" />
+                                <div className="collapse-title text-xl font-bold">
+                                    How do I make a reservation at a resort or hotel?
+                                </div>
+                                <div className="collapse-content">
+                                    <p>Making a reservation is easy! Simply visit our website, search for your desired destination, select the dates of your stay, choose from the available resorts or hotels, and proceed to book.</p>
+                                </div>
                             </div>
-                            <div className="collapse-content">
-                                <p>Making a reservation is easy! Simply visit our website, search for your desired destination, select the dates of your stay, choose from the available resorts or hotels, and proceed to book.</p>
+                            <div className="collapse collapse-arrow bg-white border mb-2">
+                                <input type="radio" name="my-accordion-2" />
+                                <div className="collapse-title text-xl font-bold">
+                                    Can I modify or cancel my reservation?
+                                </div>
+                                <div className="collapse-content">
+                                    <p>Yes, you can modify or cancel your reservation, depending on the cancellation policy of the specific resort or hotel. Please check the cancellation policy provided during the booking process for more details.</p>
+                                </div>
+                            </div>
+                            <div className="collapse collapse-arrow bg-white  border mb-2">
+                                <input type="radio" name="my-accordion-2" />
+                                <div className="collapse-title text-xl font-bold">
+                                    Are there any additional fees or hidden charges?
+                                </div>
+                                <div className="collapse-content">
+                                    <p>We believe in transparency. The price displayed during the booking process includes all applicable taxes and fees. There are no hidden charges.</p>
+                                </div>
                             </div>
                         </div>
-                        <div className="collapse collapse-arrow bg-white border mb-2">
-                            <input type="radio" name="my-accordion-2" />
-                            <div className="collapse-title text-xl font-bold">
-                                Can I modify or cancel my reservation?
+
+
+                        <div className="flex-1">
+                            <div className="collapse collapse-arrow bg-white border mb-2">
+                                <input type="radio" name="my-accordion-2" checked="checked" />
+                                <div className="collapse-title text-xl font-bold">
+                                    What payment options are available for booking?
+                                </div>
+                                <div className="collapse-content">
+                                    <p>We accept various payment methods, including major credit/debit cards and secure online payment gateways. Select your preferred payment option during the booking process.</p>
+                                </div>
                             </div>
-                            <div className="collapse-content">
-                                <p>Yes, you can modify or cancel your reservation, depending on the cancellation policy of the specific resort or hotel. Please check the cancellation policy provided during the booking process for more details.</p>
+                            <div className="collapse collapse-arrow bg-white border mb-2">
+                                <input type="radio" name="my-accordion-2" />
+                                <div className="collapse-title text-xl font-bold">
+                                    Can I request specific amenities or room preferences?
+                                </div>
+                                <div className="collapse-content">
+                                    <p>Absolutely! During the booking process, you can request specific amenities or room preferences in the Special Requests section. While we wll do our best to accommodate your requests, they are subject to availability.</p>
+                                </div>
                             </div>
-                        </div>
-                        <div className="collapse collapse-arrow bg-white  border mb-2">
-                            <input type="radio" name="my-accordion-2" />
-                            <div className="collapse-title text-xl font-bold">
-                                Are there any additional fees or hidden charges?
-                            </div>
-                            <div className="collapse-content">
-                                <p>We believe in transparency. The price displayed during the booking process includes all applicable taxes and fees. There are no hidden charges.</p>
+                            <div className="collapse collapse-arrow bg-white  border mb-2">
+                                <input type="radio" name="my-accordion-2" />
+                                <div className="collapse-title text-xl font-bold">
+                                    Is my personal information secure?
+                                </div>
+                                <div className="collapse-content">
+                                    <p>Yes, we prioritize the security and privacy of our users. Our website uses industry-standard encryption to protect your personal information. Please refer to our Privacy Policy for more details on data security and usage.</p>
+                                </div>
                             </div>
                         </div>
                     </div>
+                </div>
+            </section>
 
 
-                    <div className="flex-1">
-                        <div className="collapse collapse-arrow bg-white border mb-2">
-                            <input type="radio" name="my-accordion-2" checked="checked" />
-                            <div className="collapse-title text-xl font-bold">
-                                What payment options are available for booking?
-                            </div>
-                            <div className="collapse-content">
-                                <p>We accept various payment methods, including major credit/debit cards and secure online payment gateways. Select your preferred payment option during the booking process.</p>
-                            </div>
-                        </div>
-                        <div className="collapse collapse-arrow bg-white border mb-2">
-                            <input type="radio" name="my-accordion-2" />
-                            <div className="collapse-title text-xl font-bold">
-                                Can I request specific amenities or room preferences?
-                            </div>
-                            <div className="collapse-content">
-                                <p>Absolutely! During the booking process, you can request specific amenities or room preferences in the Special Requests section. While we wll do our best to accommodate your requests, they are subject to availability.</p>
-                            </div>
-                        </div>
-                        <div className="collapse collapse-arrow bg-white  border mb-2">
-                            <input type="radio" name="my-accordion-2" />
-                            <div className="collapse-title text-xl font-bold">
-                                Is my personal information secure?
-                            </div>
-                            <div className="collapse-content">
-                                <p>Yes, we prioritize the security and privacy of our users. Our website uses industry-standard encryption to protect your personal information. Please refer to our Privacy Policy for more details on data security and usage.</p>
+            {/* Book hotel */}
+            <section className="py-20 text-white">
+                <div className="container mx-auto">
+                    <div className="hero py-44 rounded-3xl" style={{ backgroundImage: 'url(https://i.ibb.co/LZJ6Cvc/IMG-20231009-WA0003.jpg)' }}>
+                        <div className="hero-overlay bg-opacity-70"></div>
+                        <div className="hero-content text-center">
+                            <div className="w-4/5 lg:w-full text-white  my-5">
+                                <div className="flex gap-3 justify-center">
+                                    <p className="mb-3 text-yellow-400 font-bold">ABOUT THE HOTEL</p>
+                                </div>
+                                <h1 className="text-3xl lg:text-4xl font-bold">Want to Enjoy Your Trips or Business Trips <br /> Get Booked Now</h1>
+                                <button className="btn btn-warning mt-5 text-white">Book Hotel</button>
                             </div>
                         </div>
                     </div>
@@ -191,7 +212,7 @@ const Home = () => {
 
 
             {/* Review */}
-            <section className=" bg-gray-50 py-20">
+            <section className="py-20 mt-16 bg-gray-100">
                 <div className="flex flex-col lg:flex-row gap-10 container mx-auto px-5">
                     <div className="flex-1">
                         <div>
@@ -205,7 +226,7 @@ const Home = () => {
                         <h2 className="text-4xl text-black font-bold mb-10">What Our <br /> Customer Say</h2>
 
                         <div className="w-5/6">
-                            <div className="bg-white p-10 rounded-3xl text-black">
+                            <div className="bg-gray-100 p-10 rounded-3xl text-black">
                                 <div className="flex gap-5">
                                     <div>
                                         <ImQuotesLeft></ImQuotesLeft>

@@ -1,10 +1,10 @@
 const Banner = () => {
     return (
-        <div className="mb-3 container mx-auto px-5">
-            <div className="hero rounded-xl" style={{ backgroundImage: 'url(https://i.ibb.co/QmDtfZK/IMG-20231009-WA0000.jpg)' }}>
+        <div>
+            <div className="hero" style={{ backgroundImage: 'url(https://i.ibb.co/QmDtfZK/IMG-20231009-WA0000.jpg)' }}>
                 <div className="hero-overlay bg-opacity-40 rounded-xl py-56"></div>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-20">
-                    <div className="flex items-center px-5 lg:ml-28">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 py-20 container mx-auto px-5">
+                    <div className="flex items-center">
                         <div>
                             <h1 className="mb-5 text-3xl lg:text-5xl font-bold text-white"> Your Hassle-Free <br /> Hotel Booking Solution</h1>
                             <p className="mb-5 text-white">Have You ever come across a hotel that feels like home? If not, you can find the hotel here.</p>

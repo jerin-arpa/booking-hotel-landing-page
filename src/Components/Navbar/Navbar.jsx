@@ -9,19 +9,19 @@ const Navbar = () => {
             }>Home</NavLink>
         </li>
         <li>
-            <NavLink to='/allWatches' className={({ isActive, isPending }) =>
+            <NavLink to='/resorts' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold underline" : ""
-            }>Services</NavLink>
+            }>Resort</NavLink>
         </li>
         <li>
-            <NavLink to='/allWatches' className={({ isActive, isPending }) =>
+            <NavLink to='/hotels' className={({ isActive, isPending }) =>
+                isPending ? "pending" : isActive ? "font-bold underline" : ""
+            }>Hotel</NavLink>
+        </li>
+        <li>
+            <NavLink to='/rooms' className={({ isActive, isPending }) =>
                 isPending ? "pending" : isActive ? "font-bold underline" : ""
             }>Rooms</NavLink>
-        </li>
-        <li>
-            <NavLink to='/allWatches' className={({ isActive, isPending }) =>
-                isPending ? "pending" : isActive ? "font-bold underline" : ""
-            }>Pricing</NavLink>
         </li>
         <li>
             <NavLink to='/about' className={({ isActive, isPending }) =>
@@ -31,7 +31,7 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="bg-gray-50 ">
+        <div className="bg-gray-100 py-3">
             <div className="navbar container mx-auto px-5">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -51,7 +51,7 @@ const Navbar = () => {
                 </div>
                 <div className="navbar-end gap-4">
                     <Link to='/login'>
-                        <button className="btn">Login</button>
+                        <button className="btn btn-warning text-white">Login</button>
                     </Link>
                 </div>
             </div>
